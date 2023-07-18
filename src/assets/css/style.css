@@ -19296,6 +19296,28 @@ dl li {
 }
 
 /* Sidebar */
+.sidebarnew .sidebar {
+  width: 70px;
+}
+.sidebarnew .brand-logo {
+  display: none;
+}
+.sidebarnew .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini {
+  display: block;
+}
+.sidebarnew .navbar .navbar-brand-wrapper {
+  width: 70px;
+}
+.sidebarnew .navbar .navbar-menu-wrapper {
+  width: calc(100% - 140px);
+}
+.sidebarnew span.menu-title {
+  display: none !important;
+}
+.sidebarnew .navbar .navbar-brand-wrapper .navbar-brand.brand-logo-mini img {
+  width: calc(70px - 37px);
+}
+
 .sidebar {
   min-height: calc(100vh - 70px);
   background: #ffffff;
@@ -19333,6 +19355,7 @@ dl li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  justify-content: space-between;
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;

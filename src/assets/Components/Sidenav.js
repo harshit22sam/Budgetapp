@@ -10,37 +10,6 @@ const Sidenav = () => {
   const toggleSidebar = () => {
     setIsVisible(!isVisible);
   };
-
-  useEffect(() => {
-    $(document).on(
-      "mouseenter mouseleave",
-      ".sidebar .nav-item",
-      function (ev) {
-        var body = $("body");
-        var sidebarIconOnly = body.hasClass("sidebar-icon-only");
-        var sidebarFixed = body.hasClass("sidebar-fixed");
-        if (!("ontouchstart" in document.documentElement)) {
-          if (sidebarIconOnly) {
-            if (sidebarFixed) {
-              if (ev.type === "mouseenter") {
-                body.removeClass("sidebar-icon-only");
-              }
-            } else {
-              var $menuItem = $(this);
-              if (ev.type === "mouseenter") {
-                $menuItem.addClass("hover-open");
-              } else {
-                $menuItem.removeClass("hover-open");
-              }
-            }
-          }
-        }
-      }
-    );
-    $(".aside-toggler").click(function () {
-      $(".chat-list-wrapper").toggleClass("slide");
-    });
-  });
   return (
     <>
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
